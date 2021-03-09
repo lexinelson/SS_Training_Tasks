@@ -80,7 +80,7 @@ public class Guesser {
 	/**
 	 * prints message to console that guess broke rules - didn't count
 	 */
-	public void errorMessage() {
+	private void errorMessage() {
 		System.out.println("Not a valid guess, please try again");
 	}
 	
