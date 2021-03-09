@@ -18,9 +18,10 @@ public class GuessGame {
 	 */
 	public static void main(String[] args) {
 		final int guessCap = 5;
+		final int rangeMin = 1, rangeMax = 100;
 		
 		Scanner scan = new Scanner(System.in);
-		Guesser num = new Guesser(1, 100);
+		Guesser num = new Guesser(rangeMin, rangeMax);
 		
 		int guess;
 		do {
@@ -28,8 +29,8 @@ public class GuessGame {
 			try {
 				guess = scan.nextInt();
 			} catch (InputMismatchException e) {
-				num.errorMessage();
-				continue;
+				scan = new Scanner(System.in);
+				guess = rangeMin - 1;
 			}
 			num.checkGuess(guess);
 		} while (num.getGuessCount() < guessCap && !num.isGuessedRight());
