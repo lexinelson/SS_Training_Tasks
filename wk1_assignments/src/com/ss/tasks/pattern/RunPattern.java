@@ -1,3 +1,6 @@
+/**
+ * Week 1 - Day 1 - Pattern Task
+ */
 package com.ss.tasks.pattern;
 
 /**
