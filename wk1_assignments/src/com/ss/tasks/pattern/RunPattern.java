@@ -14,11 +14,10 @@ public class RunPattern {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Pattern[] pat = new Pattern[4];
-		pat[0] = new Pattern(4);
-		pat[1] = new Pattern(4, false);
-		pat[2] = new CenterPattern(4);
-		pat[3] = new CenterPattern(4, false);
+		Pattern[] pat = new Pattern[3];
+		pat[0] = new Pattern(4, 6);
+		pat[1] = new CenterPattern(4);
+		pat[2] = new Pattern(4, false);
 		
 		for (Pattern pattern : pat) {
 			pattern.printPattern();

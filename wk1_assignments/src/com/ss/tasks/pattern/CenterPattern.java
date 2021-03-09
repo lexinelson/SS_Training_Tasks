@@ -11,20 +11,39 @@ package com.ss.tasks.pattern;
 public class CenterPattern extends Pattern {
 
 	/**
-	 * Constructor - calls parent
-	 * @param size
+	 * Constructor - calls parent default baseWidth and isUpright
+	 * @param height
 	 */
-	public CenterPattern(int size) {
-		super(size);
+	public CenterPattern(int height) {
+		super(height);
 	}
 	
 	/**
-	 * Constructor - calls parent
-	 * @param size
+	 * Constructor - calls parent default for isUpright
+	 * @param height
+	 * @param baseWidth
+	 */
+	public CenterPattern(int height, int baseWidth) {
+		super(height, baseWidth);
+	}
+	
+	/**
+	 * Constructor - calls parent default for baseWidth
+	 * @param height
 	 * @param isUpright
 	 */
-	public CenterPattern(int size, boolean isUpright) {
-		super(size, isUpright);
+	public CenterPattern(int height, boolean isUpright) {
+		super(height, isUpright);
+	}
+	
+	/**
+	 * Full Constructor - calls parent
+	 * @param height
+	 * @param baseWidth
+	 * @param isUpright
+	 */
+	public CenterPattern(int height, int baseWidth, boolean isUpright) {
+		super(height, baseWidth, isUpright);
 	}
 	
 	/**
@@ -33,35 +52,42 @@ public class CenterPattern extends Pattern {
 	@Override
 	public void printPattern() {
 		printHeader();
-		int width = isUpright ? getMidpoint() : getMidpoint() + (height - 1);
-		int count = isUpright ? 1 : 2 * height - 1;
+		int width;
 		
-		if (!isUpright)
-			System.out.println(makeBase());
-		for (int i = 0; i < height; i++) {
-			String format = "%" + width + "s%n";
-			System.out.printf(format, makeLine(count, "*"));
-			if (isUpright) {
-				++width;
-				count += 2;
+		if (isUpright) {
+			width = getMidpoint();
+			for (int i = 1; i <= height; i++) {
+				System.out.printf(formatStr(width), makeLine(i, " *"));
+				width++;
 			}
-			else {
-				--width;
-				count -= 2;
+			System.out.println(makeBase());
+		}
+		else {
+			System.out.println(makeBase());
+			width = getMidpoint() + height;
+			for (int i = height; i > 0; i--) {
+				System.out.printf(formatStr(width),  makeLine(i, " *"));
+				width--;
 			}
 		}
-		if (isUpright)
-			System.out.println(makeBase());
 	}
 	
 	
 	
 	/**
 	 * returns the midpoint of the dashed base
-	 * @return
+	 * @return peak of pyramid
 	 */
 	private int getMidpoint() {
-		int width = makeBase().length();
-		return (width % 2 == 0) ? width/2 : width/2 + 1;
+		return (height % 2 == 0) ? height + 1 : height;
+	}
+	
+	/**
+	 * Returns a format string of given width
+	 * @param width
+	 * @return format notation
+	 */
+	private String formatStr(int width) {
+		return "%" + width + "s%n";
 	}
 }

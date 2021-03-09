@@ -18,25 +18,44 @@ public class Pattern {
 	/**
 	 * instance variables
 	 */
+	private int baseWidth;
 	protected int height;
 	protected boolean isUpright;
 	
 	/**
-	 * Constructor - default orientation is upright
+	 * Constructor - default orientation is upright, default baseWidth is 5
 	 * @param height
 	 */
 	public Pattern(int height) {
-		this(height, true);
+		this(height, 5, true);
 	}
 	
-	/**
-	 * Constructor
+	/** Constructor, default upright is true
+	 * @param baseWidth
+	 * @param height
+	 */
+	public Pattern(int height, int baseWidth) {
+		this(height, baseWidth, true);
+	}
+
+	/**Constructor, default baseWidth is 0
 	 * @param height
 	 * @param isUpright
 	 */
 	public Pattern(int height, boolean isUpright) {
+		this(height, 5, isUpright);
+	}
+
+	/**
+	 * Full Constructor
+	 * @param height
+	 * @param baseWidth
+	 * @param isUpright
+	 */
+	public Pattern(int height, int baseWidth, boolean isUpright) {
 		id = ++instanceCount;
 		this.height = height;
+		this.baseWidth = baseWidth;
 		this.isUpright = isUpright;
 	}
 	
@@ -64,8 +83,7 @@ public class Pattern {
 	 * @return
 	 */
 	protected String makeBase() {
-		int length = 8 + id;
-		return makeLine(length, "-");
+		return makeLine(baseWidth, ".");
 	}
 	
 	/** 
