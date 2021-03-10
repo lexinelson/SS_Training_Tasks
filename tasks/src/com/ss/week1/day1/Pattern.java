@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 1 - Pattern Task
  */
-package com.ss.tasks.pattern;
+package com.ss.week1.day1.pattern;
 
 /**
  * Star Pattern Class
