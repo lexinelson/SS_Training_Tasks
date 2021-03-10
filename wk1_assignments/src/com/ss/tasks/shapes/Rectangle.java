@@ -9,6 +9,7 @@ package com.ss.tasks.shapes;
  *
  */
 public class Rectangle implements Shape {
+	
 	private Integer width, height;
 	
 	/**
@@ -25,10 +26,4 @@ public class Rectangle implements Shape {
 	public Integer calculateArea() {
 		return width * height;
 	}
-
-	@Override
-	public void display() {
-		System.out.println("Rectangle - Area: " + calculateArea());
-	}
-
 }

@@ -26,10 +26,4 @@ public class Triangle implements Shape {
 	public Integer calculateArea() {
 		return (base * height) / 2;
 	}
-
-	@Override
-	public void display() {
-		System.out.println("Triangle - Area: " + calculateArea());
-	}
-
 }

@@ -24,10 +24,4 @@ public class Circle implements Shape {
 	public Integer calculateArea() {
 		return (int) (Math.PI * radius * radius);
 	}
-
-	@Override
-	public void display() {
-		System.out.println("Circle - Area: " + calculateArea());
-	}
-
 }

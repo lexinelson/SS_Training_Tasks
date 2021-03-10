@@ -14,9 +14,11 @@ public interface Shape {
 	 * @return shape area
 	 */
 	public Integer calculateArea();
-
+	
 	/**
-	 * print shape name and area to console
+	 * prints shape (class) name and area to console
 	 */
-	public void display();
+	default void display() {
+		System.out.println(getClass().getSimpleName() + " - Area: " + calculateArea());
+	}
 }
