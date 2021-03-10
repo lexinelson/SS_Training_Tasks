@@ -25,5 +25,4 @@ public class IntArrayTest {
 		System.out.println("Max: " + myArray.max());
 		System.out.println("Min: " + myArray.min());
 	}
-
 }
