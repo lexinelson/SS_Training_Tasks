@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 2 - Shapes Task
  */
-package com.ss.week1.day2.shape;
+package com.ss.firstwk.tues.shape;
 
 /**
  * Interface for Shape classes

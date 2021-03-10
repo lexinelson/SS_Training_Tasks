@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 2 - Array task
  */
-package com.ss.week1.day2.array;
+package com.ss.firstwk.tues.array;
 
 /**
  * Class for 2d Integer Array

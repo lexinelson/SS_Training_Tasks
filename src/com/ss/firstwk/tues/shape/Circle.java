@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 2 - Shapes task
  */
-package com.ss.week1.day2.shape;
+package com.ss.firstwk.tues.shape;
 
 /**
  * Circle class

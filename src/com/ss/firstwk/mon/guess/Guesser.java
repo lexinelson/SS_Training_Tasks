@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 1 - Number Guesser Task
  */
-package com.ss.week1.day1.guess;
+package com.ss.firstwk.mon.guess;
 
 /**
  * Random Number Guesser Class

@@ -1,7 +1,7 @@
 /**
  * Week1 - Day 2 - Command Line Sum Task
  */
-package com.ss.week1.day2.sum;
+package com.ss.firstwk.tues.sum;
 
 /**
  * Calculator (sum) from command line arguments
