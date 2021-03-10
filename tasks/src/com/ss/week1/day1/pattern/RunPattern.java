@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 1 - Pattern Task
  */
-package com.ss.week1.day.pattern;
+package com.ss.week1.day1.pattern;
 
 /**
  * Print Pattern and CenterPattern in Console
