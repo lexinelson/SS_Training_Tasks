@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 2 - Shapes task
  */
-package com.ss.tasks.shapes;
+package com.ss.week1.day2.shape;
 
 /**
  * Rectangle class
