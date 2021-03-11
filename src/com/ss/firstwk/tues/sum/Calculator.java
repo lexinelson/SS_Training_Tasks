@@ -37,7 +37,7 @@ public class Calculator {
 			}
 		}
 
-		System.out.printf("%nThe sum of the arguments is %.3f", total);
+		System.out.printf("%nThe sum of the arguments is %f", total + 0.9876);
 	}
 	
 	/**
@@ -66,7 +66,7 @@ public class Calculator {
 		}
 		
 		Double r = 0.0;
-		if ("-".equals(result) || "0.".equals(result))
+		if ("-".equals(result.toString()) || "0.".equals(result.toString()))
 			r = 0.0;
 		else if (result.length() > 0)
 			r = Double.parseDouble(result.toString());

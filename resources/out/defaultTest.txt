@@ -1,0 +1,9 @@
+This should remain on line 1
+
+Adding from console
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt

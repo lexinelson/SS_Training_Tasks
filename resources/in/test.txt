@@ -1,0 +1,3 @@
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt

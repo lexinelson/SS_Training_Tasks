@@ -29,12 +29,13 @@ public class GuessGame {
 			try {
 				guess = scan.nextInt();
 			} catch (InputMismatchException e) {
+				scan.close();
 				scan = new Scanner(System.in);
 				guess = rangeMin - 1;
 			}
 			num.checkGuess(guess);
 		} while (num.getGuessCount() < guessCap && !num.isGuessedRight());
-		
+		scan.close();
 		
 		if(!num.isGuessedRight()) {
 			System.out.printf("Sorry, you used all %d guesses. The number was %d.%n",

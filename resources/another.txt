@@ -1,0 +1,30 @@
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txtHello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txtthis was added from the console. SHOULD NOT WIPE
+From console again Checking is clean line
+This is a test file for Week 3
+Hello whatever may read it
+This was added from the console to test running 1 argument
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
+This is a test file for Week 3
+Hello whatever may read it
+This was added from the console to test running 1 argument
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
+Hello again
+ccccccccccccccccccccccccccccccccccccc
+This text should also appear in defaultTest.txt
