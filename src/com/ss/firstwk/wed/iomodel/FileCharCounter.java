@@ -1,5 +1,5 @@
 /**
- * 
+ * Week 1 - Day 3 - Counter Char in File task
  */
 package com.ss.firstwk.wed.iomodel;
 
@@ -7,7 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * @author lexne
+ * Character Counter from File class
+ * @author Lexi Nelson
  *
  */
 public class FileCharCounter {
@@ -23,7 +24,8 @@ public class FileCharCounter {
 	}
 
 	/**
-	 * @param path the path to set
+	 * sets path - refreshes count if valid
+	 * @param the path to set
 	 */
 	public void setPath(String path) throws IOException {
 		count(path);
@@ -52,12 +54,24 @@ public class FileCharCounter {
 		return count;
 	}
 
+	/**
+	 * counts or throws exception at initialization
+	 * @param path
+	 * @param target
+	 * @throws IOException
+	 */
 	public FileCharCounter(String path, char target) throws IOException {
 		this.target = target;
 		count = count(path);
 		this.path.append(path);
 	}
 	
+	/**
+	 * Checks file for target character
+	 * @param path
+	 * @return instances of target in file
+	 * @throws IOException
+	 */
 	private int count(String path) throws IOException {
 		try (FileReader in = new FileReader(path)) {
 			int c;

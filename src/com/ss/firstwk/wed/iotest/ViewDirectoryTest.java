@@ -1,5 +1,5 @@
 /**
- * 
+ * Week 1 - Day 3 - View Directory task application
  */
 package com.ss.firstwk.wed.iotest;
 
@@ -7,11 +7,16 @@ import java.io.IOException;
 import com.ss.firstwk.wed.iomodel.DirectoryViewer;
 
 /**
- * @author lexne
+ * Application Test for DirectoryViewer
+ * @author Lexi Nelson
  *
  */
 public class ViewDirectoryTest {
 
+	/**
+	 * searches for provided directory or default resources
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		ViewDirectoryTest viewer = new ViewDirectoryTest();
 		final String defaultDir = "resources";
@@ -25,6 +30,11 @@ public class ViewDirectoryTest {
 		}
 	}
 	
+	/**
+	 * displays directory contents - catches IO ex
+	 * @param dir
+	 * @param path
+	 */
 	public void attemptDir(DirectoryViewer dir, String path) {
 		try {
 			dir = new DirectoryViewer(path);

@@ -1,5 +1,5 @@
 /**
- * 
+ * Week 1 - Day 3 - View Directory task
  */
 package com.ss.firstwk.wed.iomodel;
 
@@ -12,7 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author lexne
+ * Class to hold directory path and contents
+ * @author Lexi Nelson
  *
  */
 public class DirectoryViewer {
@@ -23,31 +24,36 @@ public class DirectoryViewer {
 	/**
 	 * @return the path
 	 */
-	public Path getPath() {
-		return path;
+	public String getPath() {
+		return path.toString();
 	}
 
 	/**
-	 * @param path the path to set
+	 * Checks path and fills contents if good
+	 * @param the path to set
+	 * @throws IOException 
 	 */
-	public void setPath(Path path) {
-		this.path = path;
+	public void setPath(String path) throws IOException {
+		fillContents(path);
+		this.path = Paths.get(path);
 	}
 
 	/**
+	 * Constructor - fills contents or throws exceptions
 	 * @param path
 	 * @throws IOException
 	 */
 	public DirectoryViewer(String path) throws IOException {
+		fillContents(path);
 		this.path = Paths.get(path);
-		fillContents();
 	}
 	
 	/**
+	 * Populates contents list if path is valid
 	 * @throws IOException
 	 */
-	private void fillContents() throws IOException {
-		try (DirectoryStream<Path> dir = Files.newDirectoryStream(path)) {	
+	private void fillContents(String path) throws IOException {
+		try (DirectoryStream<Path> dir = Files.newDirectoryStream(Paths.get(path))) {	
 			contents.clear();
 			for (Path p : dir) {
 				contents.add(p);
@@ -57,6 +63,11 @@ public class DirectoryViewer {
 		}
 	}
 	
+	/**
+	 * Nested adding for sub directories
+	 * @param path
+	 * @throws IOException
+	 */
 	private void addDir(Path path) throws IOException {
 		try (DirectoryStream<Path> dir = Files.newDirectoryStream(path)) {
 			for (Path p : dir)
@@ -65,7 +76,7 @@ public class DirectoryViewer {
 	}
 	
 	/**
-	 * 
+	 * Display contents to console
 	 */
 	public void display() {
 		System.out.printf("Directory contents for %s:%n%n", path.toString());
