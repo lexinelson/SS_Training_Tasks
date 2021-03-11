@@ -4,6 +4,8 @@
 package com.ss.firstwk.wed.iotest;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import com.ss.firstwk.wed.iomodel.FileAppender;
 
@@ -20,15 +22,18 @@ public class AppenderTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		final String defaultInFile = "resources\\in\\test.txt";
-		final String defaultOutFile = "resources\\out\\defaultTest.txt";
 		FileAppender appender;
+		AppenderTest test = new AppenderTest();
+		final String[] defaultInFile = {"resources", "in", "test.txt"};
+		final String[] defaultOutFile = {"resources", "out", "defaultTest.txt"};
+		final String inDefault = test.constructPath(defaultInFile);
+		final String outDefault = test.constructPath(defaultOutFile);
 		
 		switch (args.length) {
 			case 0:
 				try {
-					appender = new FileAppender(defaultOutFile);
-					appender.appendFromFile(defaultInFile);
+					appender = new FileAppender(outDefault);
+					appender.appendFromFile(inDefault);
 				} catch (IOException e) {
 					System.out.println("Something went wrong. The default directories may have been moved or deleted.");
 				}
@@ -51,5 +56,12 @@ public class AppenderTest {
 				}
 		}
 
+	}
+	
+	public String constructPath(String[] path) {
+		Path output = Paths.get(path[0]);
+		for (int i = 1; i < path.length; i++)
+			output = output.resolve(path[i]);
+		return output.toString();
 	}
 }

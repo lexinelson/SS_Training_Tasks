@@ -4,6 +4,9 @@
 package com.ss.firstwk.wed.iotest;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import com.ss.firstwk.wed.iomodel.FileCharCounter;
 
 /**
@@ -20,14 +23,15 @@ public class FileCounterTest {
 	 */
 	public static void main(String[] args) {
 		FileCounterTest test = new FileCounterTest();
-		final String defaultFile = "resources\\in\\lorem.txt";
+		final String[] defaultInFile = {"resources", "in", "lorem.txt"};
+		final String defPath = test.constructPath(defaultInFile);
 		
 		switch (args.length) {
 		case 0:
-			test.searchFile(defaultFile, 'a');
+			test.searchFile(defPath, 'a');
 			break;
 		case 1:
-			test.searchFile(defaultFile, args[0]);
+			test.searchFile(defPath, args[0]);
 		default:
 			for (int i = 1; i < args.length; i++) {
 				test.searchFile(args[i], args[0]);
@@ -58,5 +62,12 @@ public class FileCounterTest {
 	public void searchFile(String fileName, String multi) {
 		for (char c : multi.toCharArray())
 			this.searchFile(fileName, c);
+	}
+	
+	public String constructPath(String[] path) {
+		Path output = Paths.get(path[0]);
+		for (int i = 1; i < path.length; i++)
+			output = output.resolve(path[i]);
+		return output.toString();
 	}
 }
