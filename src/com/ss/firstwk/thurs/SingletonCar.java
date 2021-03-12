@@ -1,10 +1,11 @@
 /**
- * 
+ * Week 1- Day 4 - Singleton Task
  */
 package com.ss.firstwk.thurs;
 
 /**
- * @author lexne
+ * Shared car class for singleton task
+ * @author Lexi Nelson
  *
  */
 public class SingletonCar {
@@ -13,10 +14,16 @@ public class SingletonCar {
 	
 	private Integer gasTank;
 	
+	/**
+	 * private Constructor sets gas
+	 */
 	private SingletonCar() {
 		gasTank = 45;
 	}
 	
+	/**
+	 * @return the single shared car
+	 */
 	public static SingletonCar getInstance() {
 		if (familyCar == null)
 			synchronized (SingletonCar.class) {
@@ -26,10 +33,18 @@ public class SingletonCar {
 		return familyCar;
 	}
 	
+	/**
+	 * @return remaining gas
+	 */
 	public Integer getGasTank() {
 		return gasTank;
 	}
 	
+	/**
+	 * Use gas in tank
+	 * @param miles
+	 * @return gas remaining
+	 */
 	public Integer driveCar(Integer miles) {
 		if (gasTank > miles) 
 			gasTank -= miles;
@@ -38,6 +53,11 @@ public class SingletonCar {
 		return gasTank;
 	}
 	
+	/**
+	 * Add to gas tank
+	 * @param gas
+	 * @return new gas amount
+	 */
 	public Integer fillTank(Integer gas) {
 		gasTank += gas;
 		if (gasTank > 45)
