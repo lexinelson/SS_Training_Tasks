@@ -40,14 +40,9 @@ public class LineTest {
 		assertEquals(par.parallelTo(test), false);
 	}
 	
-	@Test
+	@Test (expected = ArithmeticException.class)
 	public void getSlopeEdgeTest() {
-		try {
-			edge.getSlope();
-			assertEquals(true, false);
-		} catch (ArithmeticException e) {
-			assertEquals(true, true);
-		}
+		edge.getSlope();
 	}
 
 	@Test

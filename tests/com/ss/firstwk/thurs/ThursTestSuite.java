@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({LineTest.class, SingletonCarTest.class, DeadLockTest.class})
+@SuiteClasses({LineTest.class, SingletonCarTest.class, DeadLockTest.class, BufferShelfTest.class})
 
 public class ThursTestSuite {
 
