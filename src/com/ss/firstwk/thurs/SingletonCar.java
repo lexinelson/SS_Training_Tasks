@@ -4,7 +4,8 @@
 package com.ss.firstwk.thurs;
 
 /**
- * Shared car class for singleton task
+ * Shared car class for singleton task 
+ * NOT THREAD SAFE (!!! FIX THIS !!!)
  * @author Lexi Nelson
  *
  */
