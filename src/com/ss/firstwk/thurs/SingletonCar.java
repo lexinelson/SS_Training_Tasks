@@ -5,7 +5,8 @@ package com.ss.firstwk.thurs;
 
 /**
  * Shared car class for singleton task 
- * NOT THREAD SAFE (!!! FIX THIS !!!)
+ * NOT THREAD SAFE (!!! FIX THIS !!!) ???ASK??
+ * It is same object - so its not being accessed simultaneously. Can it do things simultaneously??
  * @author Lexi Nelson
  *
  */

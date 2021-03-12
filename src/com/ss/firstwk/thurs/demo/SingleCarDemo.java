@@ -27,6 +27,8 @@ public class SingleCarDemo {
 		
 		
 		//demo for lack of thread safety (fix over weekend)
+		//Same object though. So it can't be doing two things at once???
+		//Ask later about this...
 		
 		Runnable teenDrives = new Runnable() {
 			@Override
