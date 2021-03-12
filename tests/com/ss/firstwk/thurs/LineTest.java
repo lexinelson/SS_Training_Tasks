@@ -5,6 +5,7 @@ package com.ss.firstwk.thurs;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
 
@@ -28,7 +29,7 @@ public class LineTest {
 		Line easyLine = new Line(5, 0, 5, 5);
 		assertEquals(5.0, easyLine.getDistance(), 0.0001);
 		assertNotEquals(easyLine.getDistance(), 4.5, 0.0001);
-		assertEquals(69.296, test.getDistance(), 0.0001);
+		assertEquals(69.2964, test.getDistance(), 0.0001);
 	}
 	
 	@Test
@@ -39,9 +40,14 @@ public class LineTest {
 		assertEquals(par.parallelTo(test), false);
 	}
 	
-	@Test(expected = ArithmeticException.class)
+	@Test
 	public void getSlopeEdgeTest() {
-		edge.getSlope();
+		try {
+			edge.getSlope();
+			assertEquals(true, false);
+		} catch (ArithmeticException e) {
+			assertEquals(true, true);
+		}
 	}
 
 	@Test
@@ -50,8 +56,13 @@ public class LineTest {
 		assertNotEquals(null, edge.getDistance(), 0.0001);
 	}
 	
-	@Test(expected = ArithmeticException.class)
+	@Test
 	public void parellelToEdgeTest() {
-		edge.parallelTo(test);
+		try {
+			edge.parallelTo(test);
+			assertEquals(true, false);
+		} catch (ArithmeticException e) {
+			assertEquals(true, true);
+		}
 	}
 }
