@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ss.firstwk.wed.iotest;
+package com.ss.firstwk.wed.ioruns;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -13,7 +13,7 @@ import com.ss.firstwk.wed.iomodel.FileAppender;
  * @author lexne
  *
  */
-public class AppenderTest {
+public class RunAppender {
 
 	/**
 	 * No arg - appends from default file to default file
@@ -23,7 +23,7 @@ public class AppenderTest {
 	 */
 	public static void main(String[] args) {
 		FileAppender appender;
-		AppenderTest test = new AppenderTest();
+		RunAppender test = new RunAppender();
 		final String[] defaultInFile = {"resources", "in", "test.txt"};
 		final String[] defaultOutFile = {"resources", "out", "defaultTest.txt"};
 		final String inDefault = test.constructPath(defaultInFile);
