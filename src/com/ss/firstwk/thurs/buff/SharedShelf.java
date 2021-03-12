@@ -33,18 +33,18 @@ public class SharedShelf {
 		if (isProducer) {
 			while (front >= shelf.length - 1)
 				try {
-					this.wait();
+					wait();
 				} catch (InterruptedException e) {}
 			location = ++front;
 		}
 		else {
 			while (front < 0)
 				try {
-					this.wait();
+					wait();
 				} catch (InterruptedException e) {}
 			location = front--;
 		}
-		this.notifyAll();
+		notifyAll();
 		return location;
 	}
 	
