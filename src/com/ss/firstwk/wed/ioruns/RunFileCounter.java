@@ -1,7 +1,7 @@
 /**
  * Week 1 - Day 3 - Counter Char in File app
  */
-package com.ss.firstwk.wed.iotest;
+package com.ss.firstwk.wed.ioruns;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -15,14 +15,14 @@ import com.ss.firstwk.wed.iomodel.FileCharCounter;
  *
  */
 
-public class FileCounterTest {
+public class RunFileCounter {
 	
 	/**
 	 * counts provided char (or 'a') from provided directories or a default
 	 * @param args (0-target(s), 1+.. directories to search)
 	 */
 	public static void main(String[] args) {
-		FileCounterTest test = new FileCounterTest();
+		RunFileCounter test = new RunFileCounter();
 		final String[] defaultInFile = {"resources", "in", "lorem.txt"};
 		final String defPath = test.constructPath(defaultInFile);
 		
