@@ -19,16 +19,16 @@ public class LineTest {
 	
 	@Test
 	public void getSlopeTest() {
-		assertEquals(1.0, test.getSlope(), 0.001);
-		assertNotEquals(test.getSlope(), 1.5, 0.001);
+		assertEquals(1.0, test.getSlope(), 0.0001);
+		assertNotEquals(test.getSlope(), 1.5, 0.0001);
 	}
 	
 	@Test
 	public void getDistanceTest() {
 		Line easyLine = new Line(5, 0, 5, 5);
-		assertEquals(5.0, easyLine.getDistance(), 0.001);
-		assertNotEquals(easyLine.getDistance(), 4.5, 0.001);
-		assertEquals(69.296, test.getDistance(), 0.001);
+		assertEquals(5.0, easyLine.getDistance(), 0.0001);
+		assertNotEquals(easyLine.getDistance(), 4.5, 0.0001);
+		assertEquals(69.296, test.getDistance(), 0.0001);
 	}
 	
 	@Test
@@ -46,8 +46,8 @@ public class LineTest {
 
 	@Test
 	public void getDistanceEdgeTest() {
-		assertEquals(0.0, edge.getDistance(), 0.001);
-		assertNotEquals(null, edge.getDistance(), 0.001);
+		assertEquals(0.0, edge.getDistance(), 0.0001);
+		assertNotEquals(null, edge.getDistance(), 0.0001);
 	}
 	
 	@Test(expected = ArithmeticException.class)
