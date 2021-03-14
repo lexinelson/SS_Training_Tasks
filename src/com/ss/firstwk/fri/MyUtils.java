@@ -11,7 +11,7 @@ public class MyUtils {
 		return x - y;
 	}
 
-	public String concatIntArray(List<Integer> input) {
+	public String concatIntList(List<Integer> input) {
 		return input.stream().map(x -> x.toString())
 				.map(x -> {
 					if (Integer.parseInt(x) % 2 == 0) 
@@ -23,6 +23,7 @@ public class MyUtils {
 	
 	public List<String> filterThreeCountAndA(List<String> input) {
 		return input.stream()
+				.filter((x) -> x != null)
 				.filter((x) -> x.length() == 3)
 				.filter((x) -> x.indexOf("a") == 0)
 				.collect(Collectors.toList());
