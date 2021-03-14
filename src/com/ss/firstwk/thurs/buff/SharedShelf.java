@@ -3,8 +3,6 @@
  */
 package com.ss.firstwk.thurs.buff;
 
-import java.util.List;
-
 /**
  * Buffered Array (shelf) class
  * @author Lexi Nelson

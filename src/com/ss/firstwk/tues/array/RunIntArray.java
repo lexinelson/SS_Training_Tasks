@@ -9,7 +9,7 @@ package com.ss.firstwk.tues.array;
  *
  */
 
-public class IntArrayTest {
+public class RunIntArray {
 
 	/**
 	 * Main method

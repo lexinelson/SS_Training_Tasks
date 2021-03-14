@@ -33,7 +33,6 @@ public class Consumer implements Runnable {
 	 */
 	@Override
 	public void run() {
-		Integer item = (int) (1 + Math.random() * 99);
 		for (int i = 0; i < cartSize; i++) {
 			purchase.add(this.store.takeOff());
 			try {
