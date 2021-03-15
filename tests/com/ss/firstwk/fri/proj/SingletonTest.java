@@ -42,7 +42,7 @@ public class SingletonTest {
 		t1.start();
 		t2.start();
 		
-		while (t1.isAlive() && t2.isAlive()) {
+		while (t1.isAlive() || t2.isAlive()) {
 			//Empty loop to wait for finished
 		}
 		assertEquals(base1, base2);
