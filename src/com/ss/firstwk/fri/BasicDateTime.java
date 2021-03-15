@@ -1,3 +1,6 @@
+/**
+ * Week 1 - Day 5 - DateTime API tasks
+ */
 package com.ss.firstwk.fri;
 
 import java.time.*;
@@ -6,6 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * DateTime question answer - in class form
+ * @author Lexi Nelson
+ *
+ */
 public class BasicDateTime {
 
 	// 1. Which class would you use to store your birthday in years,
@@ -18,8 +26,8 @@ public class BasicDateTime {
 	//		previous Thursday?
 	public LocalDate getPreviousThursday(LocalDate input) {
 		do {
-			input.minusDays(1);
-		} while (input.getDayOfWeek() != DayOfWeek.THURSDAY);
+			input = input.minusDays(1);
+		} while (input.getDayOfWeek().getValue() != DayOfWeek.THURSDAY.getValue());
 		return input;
 	}
 	
@@ -82,7 +90,7 @@ public class BasicDateTime {
 		while (m.equals(month.getMonth())) {
 			if (DayOfWeek.MONDAY.equals(month.getDayOfWeek()))
 				result.add(month.getDayOfMonth());
-			month.plusDays(1);
+			month = month.plusDays(1);
 		}
 		return result;
 	}
