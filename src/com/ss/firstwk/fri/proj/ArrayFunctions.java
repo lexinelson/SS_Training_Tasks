@@ -135,15 +135,21 @@ public class ArrayFunctions {
 			return true;
 		if (sum < target)
 			return false;
+		
+		//CHECK EVERY COMBO
+		return getAllCombos(singles).contains(target);
+	}
+	
+	//GATHER ALL OF THE SUMS
+	/**
+	 * Unfortunate brute forcing -
+	 * but powerset functions scale performance VERY poorly...
+	 * and impossibly unwieldy to test/confirm
+	 */
+	private ArrayList<Integer> getAllCombos(ArrayList<Integer> singles) {
 
 		ArrayList<Integer> sums = new ArrayList<>(singles);
 		
-		//GATHER ALL OF THE SUMS
-		/**
-		 * Unfortunate brute forcing -
-		 * but powerset functions scale performance VERY poorly...
-		 * and impossibly unwieldy to test/confirm
-		 */
 		for (int recursion = 1; recursion < singles.size(); recursion++) {
 			//Temp array for Holding
 			ArrayList<Integer> holder = new ArrayList<Integer>();
@@ -160,7 +166,6 @@ public class ArrayFunctions {
 			sums.addAll(holder);
 		}
 		return sums.stream().filter(x -> x != null)
-				.collect(Collectors.toList())
-				.contains(target);
+				.collect(Collectors.toCollection(ArrayList<Integer>::new));
 	}
 }
