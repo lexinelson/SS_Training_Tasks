@@ -27,7 +27,7 @@ public class EvaluateNums {
 		EvaluateNums eval = new EvaluateNums();
 		eval.evaluate(System.in, System.out);
 	}
-	
+	 
 	/**
 	 * Evaluate number format & run lambdas through custom in/out streams
 	 * @param in
@@ -84,6 +84,7 @@ public class EvaluateNums {
 			}
 		} while (i < count && errCount < 20);
 		
+		scan.close();
 		//If the test lists properly populated - execute
 		if (errCount == 20) {
 			outLine.println("TOO MANY ATTEMPTS WITH INCORRECT FORMAT");
