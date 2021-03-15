@@ -44,7 +44,7 @@ public class MyUtilsTest {
 	public void concatIntArrayEdgeTest() {
 		assertEquals("", base.concatIntList(Arrays.asList()));
 		assertEquals("o3,o5", base.concatIntList(Arrays.asList(3, null, 5)));
-		assertEquals("", base.concatIntList(null));
+		assertEquals(null, base.concatIntList(null));
 	}
 	
 	@Test
@@ -60,6 +60,6 @@ public class MyUtilsTest {
 		
 		assertArrayEquals(new String[] {"ace", "are"}, base.filterThreeCountAndA(mixedEdge).toArray());
 		assertArrayEquals(new String[] {}, base.filterThreeCountAndA(fullNull).toArray());
-		assertArrayEquals(null, base.filterThreeCountAndA(null).toArray());
+		assertEquals(null, base.filterThreeCountAndA(null));
 	}
 }

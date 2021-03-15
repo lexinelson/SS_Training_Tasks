@@ -64,7 +64,7 @@ public class LambdaBasicsTest {
 	
 	@Test
 	public void arrangeEdgeTest() {
-		assertArrayEquals(null, test.arrange(new String[10], (x, y) -> Integer.parseInt(x)/Integer.parseInt(y)));
+		assertArrayEquals(new String[0], test.arrange(new String[10], (x, y) -> Integer.parseInt(x)/Integer.parseInt(y)));
 		assertArrayEquals(null, test.arrange(null, (x, y) -> x.length() - y.length()));
 		assertEquals("NO ARRAY WAS PASSED", mockConsole.toString().trim());
 	}
