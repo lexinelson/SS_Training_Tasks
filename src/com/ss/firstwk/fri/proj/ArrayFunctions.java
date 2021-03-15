@@ -125,8 +125,6 @@ public class ArrayFunctions {
 			}
 			sums.addAll(holder);
 		}
-		System.out.println(sums.stream().filter(x -> x != null)
-				.collect(Collectors.toList()));
 		return sums.stream().filter(x -> x != null)
 				.collect(Collectors.toList())
 				.contains(target);
