@@ -1,15 +1,24 @@
+/**
+ * Week 1 - Evaluation Project
+ */
 package com.ss.firstwk.fri.proj;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+/**
+ * Array Functions Class (assignments 2 through 5 of project)
+ * @author Lexi Nelson
+ *
+ */
 public class ArrayFunctions {
 	
+	/**
+	 * Uses % 10 through map to list rightmost digits
+	 * @param input
+	 * @return 
+	 */
 	public Integer[] rightDigit(Integer[] input) {
 		if (input == null)
 			return null;
@@ -19,6 +28,11 @@ public class ArrayFunctions {
 		}).filter(x -> x != null).toArray(Integer[]::new);
 	}
 	
+	/**
+	 * Uses map to double each item in int array
+	 * @param input
+	 * @return
+	 */
 	public Integer[] doubling(Integer[] input) {
 		if (input == null)
 			return null;
@@ -28,6 +42,11 @@ public class ArrayFunctions {
 		}).filter(x -> x != null).toArray(Integer[]::new);
 	}
 	
+	/**
+	 * Uses replace to remove all x's from a string array
+	 * @param input
+	 * @return
+	 */
 	public String[] noX(String[] input) {
 		if (input == null)
 			return null;
@@ -41,6 +60,14 @@ public class ArrayFunctions {
 	
 	
 
+	/**
+	 * Big oof.... knapsack problem: any possible combos that reach total
+	 * extra: groups are all or nothing
+	 * Divides between groups and singles, iterates through groups, then creates a masterlist sum for singles
+	 * @param input
+	 * @param target
+	 * @return
+	 */
 	public Boolean groupSumClump(Integer[] input, Integer target) {
 		if (input == null || target == null || (input.length == 0 && target != 0))
 			return false;
@@ -83,6 +110,8 @@ public class ArrayFunctions {
 				singles.add(input[i]);
 			}
 		}
+		
+		
 		//MANUALLY ADD LAST TO AVOID EXCEPTION
 		if (input[input.length - 1] == input[input.length-2]) {
 			groups.get(groupIndex).add(input[input.length-1]);
