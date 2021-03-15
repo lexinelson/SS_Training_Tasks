@@ -150,7 +150,7 @@ public class ArrayFunctions {
 
 		ArrayList<Integer> sums = new ArrayList<>(singles);
 		
-		for (int recursion = 1; recursion < singles.size(); recursion++) {
+		for (int iteration = 1; iteration < singles.size(); iteration++) {
 			//Temp array for Holding
 			ArrayList<Integer> holder = new ArrayList<Integer>();
 			
