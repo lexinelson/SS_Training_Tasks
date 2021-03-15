@@ -14,12 +14,12 @@ import java.sql.Statement;
  * Repaired Singleton for assignment 6 of project
  * @author Lexi Nelson
  *
- */
+ */ 
 public class SingletonFixed {
 	/**
 	 * Volatile because multiple access of same instance
 	 */
-	private static Connection conn = null;
+	volatile private static Connection conn = null;
 	
 	/**
 	 * Volatile because multiple access
