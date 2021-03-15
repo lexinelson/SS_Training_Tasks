@@ -1,5 +1,5 @@
 /**
- * 
+ * JUnit tests for Friday Tasks
  */
 package com.ss.firstwk.fri;
 
@@ -9,6 +9,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 
 /**
+ * Friday Task Test Suite
  * @author lexne
  *
  */
